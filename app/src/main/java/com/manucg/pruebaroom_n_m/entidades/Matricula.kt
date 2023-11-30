@@ -16,8 +16,8 @@ import androidx.room.ForeignKey
         ),
         ForeignKey(
             entity = Curso::class,
-            parentColumns = ["idAlumno"],
-            childColumns = ["recetaId"]
+            parentColumns = ["idCurso"],
+            childColumns = ["cursoId"]
         )
     ]
 )

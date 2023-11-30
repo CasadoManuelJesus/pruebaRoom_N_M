@@ -7,7 +7,7 @@ import androidx.room.PrimaryKey
 @Entity(tableName="curso")
 data class Curso(
     @ColumnInfo(name="nivel")
-    var edad : Int,
+    var nivel : Int,
     @ColumnInfo(name = "nombre")
     var nombre : String
 ){

@@ -1,16 +1,17 @@
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
+    id 'kotlin-kapt'
 }
 
 android {
     namespace 'com.manucg.pruebaroom_n_m'
-    compileSdk 32
+    compileSdk 34
 
     defaultConfig {
         applicationId "com.manucg.pruebaroom_n_m"
         minSdk 25
-        targetSdk 32
+        targetSdk 34
         versionCode 1
         versionName "1.0"
 
@@ -34,9 +35,11 @@ android {
 
 dependencies {
 
-    def room_version = "2.4.3"
-    implementation "androidx.room:room-runtime:$room_version"
-    annotationProcessor "androidx.room:room-compiler:$room_version"
+    //-----------------------------------------------------------------------------
+    implementation("androidx.room:room-runtime:2.5.0")
+    annotationProcessor("androidx.room:room-compiler:2.5.0")
+
+    kapt("androidx.room:room-compiler:2.5.0")
 
     implementation 'androidx.core:core-ktx:1.7.0'
     implementation 'androidx.appcompat:appcompat:1.6.1'

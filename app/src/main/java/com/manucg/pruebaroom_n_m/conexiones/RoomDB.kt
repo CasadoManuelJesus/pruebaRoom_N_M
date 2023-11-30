@@ -6,13 +6,14 @@ import androidx.room.Room
 import androidx.room.RoomDatabase
 import com.manucg.pruebaroom_n_m.entidades.Alumno
 import com.manucg.pruebaroom_n_m.entidades.Curso
+import com.manucg.pruebaroom_n_m.entidades.Matricula
 import com.manucg.pruebaroom_n_m.interfaces.InterfaceDaoAlumno
 import com.manucg.pruebaroom_n_m.interfaces.InterfaceDaoCurso
 import com.manucg.pruebaroom_n_m.interfaces.InterfaceDaoMatricula
 
 // Esta anotación define la base de datos utilizando Room.
 // Cambio la versión a 2 debido a la migración
-@Database(entities = [Alumno::class, Curso::class], version = 1)
+@Database(entities = [Alumno::class, Curso::class, Matricula::class], version = 1)
 abstract class RoomDB : RoomDatabase() {
 
     // Este método abstracto proporciona acceso al DAO
